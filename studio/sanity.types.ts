@@ -83,6 +83,14 @@ export type Link = {
   openInNewTab?: boolean
 }
 
+export type CenteredHero = {
+  _type: 'centeredHero'
+  eyebrow?: string
+  title: string
+  description?: string
+  theme?: Theme
+}
+
 export type SanityImageAssetReference = {
   _ref: string
   _type: 'reference'
@@ -222,6 +230,9 @@ export type Page = {
     | ({
         _key: string
       } & InfoSection)
+    | ({
+        _key: string
+      } & CenteredHero)
   >
 }
 
@@ -521,6 +532,7 @@ export type AllSanitySchemaTypes =
   | PageReference
   | PostReference
   | Link
+  | CenteredHero
   | SanityImageAssetReference
   | CallToAction
   | InfoSection

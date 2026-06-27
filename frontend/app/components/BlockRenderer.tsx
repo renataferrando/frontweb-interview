@@ -1,5 +1,6 @@
 import React from 'react'
 
+import CenteredHeroBlock from '@/app/components/CenteredHeroBlock'
 import Cta from '@/app/components/Cta'
 import Info from '@/app/components/InfoSection'
 import {dataAttr} from '@/sanity/lib/utils'
@@ -19,6 +20,7 @@ type BlocksType = {
 const Blocks = {
   callToAction: Cta,
   infoSection: Info,
+  centeredHero: CenteredHeroBlock,
 } as unknown as BlocksType
 
 /**
